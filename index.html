@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon</title>
+    <link href="./main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="slider">
+      <figure class="spinner">
+        <img src="./Images/dung.png" alt="덩쿠리" />
+        <img src="./Images/jilpuk.png" alt="질퍽이" />
+        <img src="./Images/parsel.png" alt="파르셀" />
+        <img src="./Images/polygon.png" alt="폴리곤" />
+        <img src="./Images/raplas.png" alt="라프라스" />
+        <img src="./Images/yadon.webp" alt="야돈" />
+      </figure>
+    </div>
+
+    <span style="float: left" onclick="galleryspin('-')">&lt;</span>
+    <span style="float: right" onclick="galleryspin('')">&gt;</span>
+
+    <script>
+      let angle = 0;
+      function galleryspin(sign) {
+        spinner = document.querySelector(".spinner");
+        if (!sign) {
+          angle = angle + 60;
+        } else {
+          angle = angle - 45;
+        }
+        spinner.setAttribute("style", "transform: rotateY(" + angle + "deg);");
+      }
+    </script>
+  </body>
+</html>
